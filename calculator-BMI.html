@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .input-header {
+            width: 300px;
+            height: 40px;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #252627;
+            border: none;
+            color: white;
+        }
+
+        .button.enter {
+            width: 150px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button.enter:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body bgcolor="#151617" style="color: white">
+    <label for="weight">Weight number</label> <br>
+        <input type="number" name="weight" class="input-header" id="weight" placeholder="Enter weight body" required> <br>
+    <label for="phone">Height number</label> <br>
+    <input type="number" name="height" class="input-header" id="height" placeholder="Enter height body" required> <br>
+    <br>
+    <button class="button enter" onclick= "hitungbmi()">Enter</button>
+    <br>
+    <h1 id="result"></h1>
+
+    <script>
+        function hitungbmi() {
+            let weight = document.getElementById("weight").value;
+            let height = document.getElementById("height").value;
+
+            let height_meter = height / 100;
+            let bmi = weight / (height_meter * height_meter)
+
+            let result = "YOUR BMI IS " + bmi.toFixed(2)
+
+            if (bmi < 18.5) {
+                result += "<br> UNDERWEIGHT"
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                result += "<br> NORMAL WEIGHT"
+            } else if (bmi >= 25 && bmi < 29.9) {
+                result += "<br> OVERWEIGHT"
+            } else {
+                result += "<br> OBESITY"
+            }
+
+            document.getElementById("result").innerHTML = result
+        }
+    </script>
+</body>
+</html>
