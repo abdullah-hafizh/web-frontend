@@ -1,47 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-    <link rel="stylesheet" href="CSS/style2.css">
-    <style>
-        .judul {
-            margin-left: 20px;
-            margin-top: 10px;
-            border: 1px solid rgb(21, 255, 0);
-            padding-left: 10px;
-        }
-        #box1 {
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgb(255, 0, 0);
-            margin-top: 25px;
-            margin-bottom: 25px;
-            margin-left: 25px;
-            margin-right: 25px;
-            padding: 10px;
-            width: 200px;
-            height: 200px;
-        }
-        #box2 {
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgb(255, 0, 0);
-            margin-top: 25px;
-            margin-bottom: 25px;
-            margin-left: 25px;
-            margin-right: 25px;
-            padding: 10px;
-            width: 200px;
-            height: 200px;
-        }
-    </style>
-</head>
-<body bgcolor="#050000" style="color :rgb(255, 255, 255)">
-    <h1 class="judul">Tebak-tebakan</h1>
-    <div id="box1">Es, es apa yang bergerak?</div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <!-- ini adalah contoh button boostsrap -->
+        <h1>ini bootstrap</h1>
+        <button class="btn btn-primary">save</button>
+        <button class="btn btn-danger">delete</button>
+        <button class="btn btn-success">update</button>
+        <a href="https://youtube.com" class="btn btn-danger">youtube</a>
 
-    <div id="box2">Hayooo Tebakk!</div>
-</body>
+        <!-- ini adalah contoh card boostsrap -->
+        <div class="card p-3" style="width: 400px; margin:10px">
+            <img height="200px" src="https://www.eigeradventure.com/blog/wp-content/uploads/2024/06/gunung-terindah-di-indonesia-12.jpg" alt="">
+            <div class="card-body">
+                <h2 class="card-title text-center">Gunung Terindah di Indonesia</h2>
+                <p class="card-text">Gunung di Indonesia tidak hanya menawarkan
+                <a href="#" class="btn btn-primary" data-bs-toggle>selengkapny</a>
+        </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- ini adalah contoh alert boostsrap -->
+         <div class="alert alert-success"> berhasil disimpan </div>
+         <div class="alert alert-danger" style="width: 300px;"> username atau password salah </div>
+         
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
 </html>
